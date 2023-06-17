@@ -7,12 +7,12 @@
  */
 int main(void)
 {
-	int number = 0x0;
+	char hex[] = "0123456789abcdef";
+	int i;
 
-	while (number <= 0x9)
+	for (i = 0; i < 16; i++)
 	{
-		putchar(number + '0x0');
-		number++;
+		putchar(hex[i]);
 	}
 
 	putchar('\n');
