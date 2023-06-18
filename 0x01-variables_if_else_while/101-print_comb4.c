@@ -1,25 +1,28 @@
-#include <stdio.h>
-
+#include<stdio.h>
 /**
  * main - Entry point
  * Return: Always 0 (Success)
  */
-	int main(void)
+int main(void)
 {
-int number = 12;
-while (number <= 789)
+	int number;
+	for (number = 0; number < 790; number++)
 {
-putchar((number / 100) + '0');
-putchar(((number / 10) % 10) + '0');
-putchar((number % 10) + '0');
+int hundreds = number / 100;
+int tens = (number / 10) % 10;
+int units = number % 10
+	if (hundreds != tens && hundreds != units && tens != units)
+{
+putchar(hundreds + '0');
+putchar(tens + '0');
+putchar(units + '0');
 if (number != 789)
 {
 putchar(',');
 putchar(' ');
 }
-number++;
 }
-putchar('\n');
-    return (0);
 }
-
+	putchar('\n');
+	return (0);
+}
