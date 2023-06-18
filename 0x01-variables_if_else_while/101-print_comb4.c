@@ -2,27 +2,24 @@
 
 /**
  * main - Entry point
- *
  * Return: Always 0 (Success)
  */
-int main(void)
+	int main(void)
 {
-int digit1, digit2, digit3;
-for (digit1 = 0; digit1 <= 7; digit1++)
+int number = 12;
+while (number <= 789)
 {
-for (digit2 = digit1 + 1; digit2 <= 8; digit2++)
-{
-for (digit3 = digit2 + 1 ; digit3 <= 9; digit3++)
-putchar(digit1 + '0');
-putchar(digit2 + '0');
-putchar(digit3 + '0');
-if (digit1 != 7 || digit2 != 8 || digit3 != 9)
+putchar((number / 100) + '0');
+putchar(((number / 10) % 10) + '0');
+putchar((number % 10) + '0');
+if (number != 789)
 {
 putchar(',');
 putchar(' ');
 }
-}
+number++;
 }
 putchar('\n');
-return (0);
+    return (0);
 }
+
